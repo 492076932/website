@@ -28,15 +28,25 @@
 
 #wrap .box .info .mark{
 	position: absolute;
-    background-color: #ff2442;
     color: #fff;
-    right: 20px;
-    top: 20px;
+    right: 16px;
+    top: 16px;
     font-size: 12px;
     padding: 2px 10px;
     font-weight: bolder;
     border-radius: 3px;
-    z-index: 2;
+	z-index: 2;
+	opacity: .94;
+}
+
+#wrap .box .info .mark.new{
+    background-color: #ff2442;
+}
+#wrap .box .info .mark.hot{
+    background-color: #ff5c38;
+}
+#wrap .box .info .mark.adv{
+    background-color: #4395FF;
 }
 
 #wrap .box .info .pic {

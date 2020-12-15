@@ -38,8 +38,13 @@ window.onload = function () {
 				info.appendChild(a);
 				if (!data[i].title) {
 					var mark = document.createElement('div');
-					mark.className = 'mark';
+					mark.className = 'mark adv';
 					mark.innerHTML = '推广';
+					a.appendChild(mark);
+				}else if(Math.floor(Math.random()*10) < 3){
+					var mark = document.createElement('div');
+					mark.className = 'mark hot';
+					mark.innerHTML = '热';
 					a.appendChild(mark);
 				}
 				//创建pic
