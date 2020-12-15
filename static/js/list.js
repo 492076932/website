@@ -4,7 +4,7 @@ window.onload = function () {
 
 	//模拟数据
 	var data = [
-		{ 'src': '1.jpg', 'title': '【热门菜色】甜酒冲蛋' ,'desc': '这个菜，最重要的就是最后一步淋油！所以千万别图省事，要不然味道差太多， 这个菜的味道，麻椒鲜香！绝对刺激！只要是你喜欢吃的蔬菜都是毛血旺！会了这个做法，只要你喜欢，配啥都可以！' },
+		{ 'src': '1.jpg', 'title': '【热门菜色】甜酒冲蛋', 'desc': '这个菜，最重要的就是最后一步淋油！所以千万别图省事，要不然味道差太多， 这个菜的味道，麻椒鲜香！绝对刺激！只要是你喜欢吃的蔬菜都是毛血旺！会了这个做法，只要你喜欢，配啥都可以！' },
 		{ 'src': '2.jpg', 'title': '【热门菜色】甜酒冲蛋' },
 		{ 'src': '3.jpg', 'title': '【热门菜色】甜酒冲蛋', 'desc': '这个菜，最重要的就是最后一步淋油！所以千万别图省事，要不然味道差太多' },
 		{ 'src': '4.jpg' },
@@ -31,10 +31,15 @@ window.onload = function () {
 				var info = document.createElement('div');
 				info.className = 'info';
 				box.appendChild(info);
+				//创建a标记
+				var a = document.createElement('a');
+				a.href = "https://v.qq.com";
+				a.target = "_blank"
+				info.appendChild(a);
 				//创建pic
 				var pic = document.createElement('div');
 				pic.className = 'pic';
-				info.appendChild(pic);
+				a.appendChild(pic);
 				//创建img
 				var img = document.createElement('img');
 				img.src = './static/images/' + data[i].src;
@@ -44,11 +49,8 @@ window.onload = function () {
 				if (data[i].title) {
 					var title = document.createElement('div');
 					title.className = 'title';
-					info.appendChild(title);
-					//创建a标记
-					var a = document.createElement('a');
-					a.innerHTML = data[i].title;
-					title.appendChild(a);
+					title.innerHTML = data[i].title;
+					a.appendChild(title);
 				}
 				//创建描述
 				if (data[i].desc) {

@@ -66,9 +66,6 @@
 	color: #000;
 	font-size: 18px;
 	font-weight: bold;
-}
-
-#wrap .box .info .title a{
 	overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -76,6 +73,7 @@
 	-webkit-box-orient: vertical;
 	text-align: left;
 }
+
 
 #wrap .box .info .desc {
 	color: #666;
