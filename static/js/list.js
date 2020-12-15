@@ -36,6 +36,12 @@ window.onload = function () {
 				a.href = "https://v.qq.com";
 				a.target = "_blank"
 				info.appendChild(a);
+				if (!data[i].title) {
+					var mark = document.createElement('div');
+					mark.className = 'mark';
+					mark.innerHTML = '推广';
+					a.appendChild(mark);
+				}
 				//创建pic
 				var pic = document.createElement('div');
 				pic.className = 'pic';
